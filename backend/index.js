@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const payload = req.body;
+  const payload = req.body.data;
   const storedData = fs.writeFileSync(
     "data.json",
     JSON.stringify(payload, null),

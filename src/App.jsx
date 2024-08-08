@@ -1,9 +1,17 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Item from "./assets/Components/Item";
+import Logo from "./assets/Images/stall_logo.png";
+import MilkTea from "./assets/Images/chiya-removebg-preview.png";
+import BlackTea from "./assets/Images/black tea.png";
+import LemonTea from "./assets/Images/lemonTea.png";
+import Lemonade from "./assets/Images/lemonade.png";
+import PeachIceTea from "./assets/Images/Peach-Ice-Tea.png";
+import "./assets/CSS/index.css";
 
 export default function App() {
   const [price, setprice] = useState();
-  const [quantity, setQuantity] = useState("");
+  const [quantity, setQuantity] = useState();
   const [finalPrice, setFinalPrice] = useState("");
   const [name, setName] = useState("");
   const [method, setMethod] = useState("");
@@ -38,52 +46,91 @@ export default function App() {
 
   return (
     <>
-      {/* <form onSubmit={storeData}> */}
-      <div>
-        <label>Enter the item name:</label>
+      <div className="logo">
+        <img src={Logo} alt="" className="logo" />
       </div>
-      <div>
-        <select
-          name="itemNames"
-          id="itemNames"
-          onChange={(e) => {
-            setName(e.target.value);
+      <div className="item-grid">
+        <div
+          onClick={() => {
+            setName("Milk Tea");
+            setprice(20);
           }}
         >
-          <option value="Milk Tea">Milk Tea</option>
-          <option value="Black Tea">Black Tea</option>
-          <option value="lemon Tea">Lemon Tea</option>
-          <option value="Lemonate">Lemonate</option>
-          <option value="Peach Ice Tea">Peach Ice Tea</option>
-        </select>
-      </div>
-      <div>
-        <label>Enter the price of item:</label>
-      </div>
-      <div>
-        <input
-          type="text"
-          placeholder="Price"
-          onChange={(e) => {
-            setprice(e.target.value);
+          <Item
+            name={"Milk Tea"}
+            price={20}
+            img={MilkTea}
+            quantity={(e) => {
+              setQuantity(e.target.value);
+            }}
+          />
+        </div>
+        <div
+          onClick={() => {
+            setName("Black Tea");
+            setprice(15);
           }}
-        />
-      </div>
-      <div>
-        <label>Enter the Quantity of Item:</label>
-      </div>
-      <div>
-        <input
-          type="text"
-          placeholder="Quantity of Item"
-          onChange={(e) => {
-            setQuantity(e.target.value);
+        >
+          <Item
+            name={"Black Tea"}
+            price={15}
+            img={BlackTea}
+            quantity={(e) => {
+              setQuantity(e.target.value);
+            }}
+          />
+        </div>
+        <div
+          onClick={() => {
+            setName("Lemon Tea");
+            setprice(20);
           }}
-        />
+        >
+          <Item
+            name={"Lemon Tea"}
+            price={20}
+            img={LemonTea}
+            quantity={(e) => {
+              setQuantity(e.target.value);
+            }}
+          />
+        </div>
+        <div
+          onClick={() => {
+            setName("Lemonade");
+            setprice(35);
+          }}
+        >
+          <Item
+            name={"Lemonade"}
+            price={35}
+            img={Lemonade}
+            quantity={(e) => {
+              setQuantity(e.target.value);
+            }}
+          />
+        </div>
+        <div
+          onClick={() => {
+            setName("Peach Ice Tea");
+            setprice(50);
+          }}
+        >
+          <Item
+            name={"Peach Ice Tea"}
+            price={50}
+            img={PeachIceTea}
+            quantity={(e) => {
+              setQuantity(e.target.value);
+            }}
+          />
+        </div>
       </div>
+
       <div>
         <label>Payment Method</label>
       </div>
+      <br />
       <div>
         <select
           name="Payment Method"

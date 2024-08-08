@@ -1,0 +1,43 @@
+.quantity{
+    display: none;
+}
+
+.name{
+    font-weight: 850;
+    font-size: 24px;
+    color: #997435;
+    text-align: center;
+}
+
+.item-img{
+    height: 10rem;
+    width: 10rem;
+    object-fit: contain;
+    aspect-ratio: 3/2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+}
+
+.item:hover{
+    background-color: red;
+}
+
+.quant{
+    width: 10%;
+}
+
+.item-info{
+    /* color: #bd7735; */
+    text-align: center;
+}
