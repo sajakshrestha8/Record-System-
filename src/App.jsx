@@ -15,6 +15,7 @@ export default function App() {
   const [finalPrice, setFinalPrice] = useState("");
   const [name, setName] = useState("");
   const [method, setMethod] = useState("");
+  const [color, setColor] = useState("white");
   const url = "http://localhost:8001/";
 
   const sendData = {

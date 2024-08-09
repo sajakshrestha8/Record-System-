@@ -24,13 +24,19 @@
 }
 
 .item{
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    transition: 0.3s ease-in-out;
+    border-radius: 6px;
 }
 
 .item:hover{
-    background-color: red;
+    background-color: #f7ecd8;
+}
+
+.item:active{
+    background-color: #f7ecd8;
 }
 
 .quant{
