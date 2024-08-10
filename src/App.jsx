@@ -7,6 +7,7 @@ import BlackTea from "./assets/Images/black tea.png";
 import LemonTea from "./assets/Images/lemonTea.png";
 import Lemonade from "./assets/Images/lemonade.png";
 import PeachIceTea from "./assets/Images/Peach-Ice-Tea.png";
+import QRsample from "./assets/Images/QR-sample.png";
 import "./assets/CSS/index.css";
 
 export default function App() {
@@ -128,26 +129,34 @@ export default function App() {
         </div>
       </div>
 
-      <div>
-        <label>Payment Method</label>
-      </div>
-      <br />
-      <div>
-        <select
-          name="Payment Method"
-          id="Payment Method"
-          onChange={(e) => {
-            setMethod(e.target.value);
-          }}
-        >
-          <option value="Online">Online</option>
-          <option value="Cash">Cash</option>
-        </select>
-      </div>
-      <div></div>
-      <button onClick={calculate}>Enter Data</button>
-      <div>
-        <label>Total Price: {finalPrice}</label>
+      <div className="payment-method-scan-grid">
+        <div>
+          <div className="payment-label">
+            <label>Payment Method</label>
+          </div>
+          <div>
+            <select
+              name="Payment Method"
+              id="Payment Method"
+              onChange={(e) => {
+                setMethod(e.target.value);
+              }}
+              className="option"
+            >
+              <option value="Online">Online</option>
+              <option value="Cash">Cash</option>
+            </select>
+          </div>
+          <div></div>
+          <button onClick={calculate}>Enter Data</button>
+
+          <div>
+            <label>Total Price: {finalPrice}</label>
+          </div>
+        </div>
+        <div>
+          <img src={QRsample} alt="" className="qr-img" />
+        </div>
       </div>
       {/* </form> */}
     </>

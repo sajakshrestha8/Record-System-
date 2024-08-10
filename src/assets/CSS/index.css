@@ -19,6 +19,27 @@ body{
     object-fit: contain;
 }
 
+.payment-label{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.option{
+    border-radius: none;
+    border: none;
+    width: 5rem;
+}
+
+.qr-img{
+    height: 20rem;
+    width: 20rem;
+}
+
+.payment-method-scan-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 /* label{
     color: white;
 } */
