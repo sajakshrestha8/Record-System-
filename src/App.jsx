@@ -130,7 +130,7 @@ export default function App() {
       </div>
 
       <div className="payment-method-scan-grid">
-        <div>
+        <div className="payment-grid">
           <div className="payment-label">
             <label>Payment Method</label>
           </div>
@@ -147,9 +147,11 @@ export default function App() {
               <option value="Cash">Cash</option>
             </select>
           </div>
-          <div></div>
-          <button onClick={calculate}>Enter Data</button>
-
+          <div>
+            <button onClick={calculate} className="btn">
+              Enter Data
+            </button>
+          </div>
           <div>
             <label>Total Price: {finalPrice}</label>
           </div>

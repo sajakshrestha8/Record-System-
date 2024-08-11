@@ -40,6 +40,22 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 
+.payment-grid{
+    display: grid;
+}
+
+.btn{
+    border: none;
+    padding: 13px;
+    font-size: 16px;
+    background-color: #f7ecd8;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover{
+    font-size: 17px;
+    padding: 13px;
+}
 /* label{
     color: white;
 } */
